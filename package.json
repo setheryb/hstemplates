@@ -1,0 +1,164 @@
+{
+ "name": "hsi.com",
+ "version": "0.1",
+ "description": "Website for hsi.com",
+ "main": "gulpfile.js",
+ "author": "Seth Burnett, Josh Pratt,",
+ "copyright": "HSI",
+ "license": "UNLICENSED",
+ "private": true,
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+ },
+ "urls": {
+  "live": "https://hsi.com/",
+  "local": "http://hsi.local/",
+  "critical": "https://pillar.dev/"
+ },
+ "critical": [
+  {
+   "url": "",
+   "template": "index"
+  },
+  {
+   "url": "login",
+   "template": "login"
+  },
+  {
+   "url": "terms",
+   "template": "_legal"
+  },
+  {
+   "url": "404",
+   "template": "404"
+  },
+  {
+   "url": "solutions/compliance-and-safety-software",
+   "template": "solutions/_type"
+  },
+  {
+   "url": "solutions/safety-training",
+   "template": "solutions/entry"
+  },
+  {
+   "url": "solutions",
+   "template": "solutions/index"
+  },
+  {
+   "url": "resources/top-7-things-to-look-for-in-a-continuing-education-provider-for-firefighters",
+   "template": "resources/_entry"
+  },
+  {
+   "url": "resources/white-paper",
+   "template": "resources/_listing"
+  },
+  {
+   "url": "resources",
+   "template": "resources/index"
+  },
+  {
+   "url": "solutions/osha-10-30",
+   "template": "osha1030/index"
+  },
+  {
+   "url": "job-roles/temp-job-holder",
+   "template": "job-roles/_entry"
+  },
+  {
+   "url": "industries/education",
+   "template": "industries/_entry"
+  },
+  {
+   "url": "course-library/safety-compliance/osha/bloodborne-pathogens-bbp",
+   "template": "course-library/_entry"
+  },
+  {
+   "url": "course-library",
+   "template": "course-library/index"
+  },
+  {
+   "url": "resources/blog/construction-focus-four-stay-safe-with-hsi",
+   "template": "blog/_entry"
+  },
+  {
+   "url": "resources/blog",
+   "template": "blog/index"
+  },
+  {
+   "url": "careers",
+   "template": "about-hsi/_careers"
+  },
+  {
+   "url": "about-hsi",
+   "template": "about-hsi/_index"
+  },
+  {
+   "url": "partnerships",
+   "template": "about-hsi/_partnerships"
+  }
+ ],
+ "devDependencies": {
+  "@babel/core": "^7.11.1",
+  "@babel/preset-env": "^7.11.0",
+  "babel-core": "^6.26.3",
+  "babel-polyfill": "^6.26.0",
+  "babel-preset-env": "^1.7.0",
+  "babel-preset-es2015": "^6.24.1",
+  "browser-sync": "^2.26.12",
+  "chalk": "^4.1.0",
+  "critical": "^2.0.1",
+  "del": "^5.1.0",
+  "dotenv": "^8.2.0",
+  "eric-meyer-reset": "^2.0.0",
+  "fancy-log": "^1.3.3",
+  "favicons": "^6.2.0",
+  "gulp": "^4.0.2",
+  "gulp-autoprefixer": "^7.0.1",
+  "gulp-awspublish": "^4.1.2",
+  "gulp-babel": "^8.0.0",
+  "gulp-babel-minify": "^0.5.1",
+  "gulp-cached": "^1.1.1",
+  "gulp-clean": "^0.4.0",
+  "gulp-clean-css": "^4.3.0",
+  "gulp-concat": "^2.6.1",
+  "gulp-cssnano": "^2.1.3",
+  "gulp-filter": "^6.0.0",
+  "gulp-foreach": "^0.1.0",
+  "gulp-gzip": "^1.4.2",
+  "gulp-header": "^2.0.9",
+  "gulp-if": "^3.0.0",
+  "gulp-imagemin": "^7.1.0",
+  "gulp-livereload": "^4.0.2",
+  "gulp-load-plugins": "^2.0.3",
+  "gulp-newer": "^1.4.0",
+  "gulp-notify": "^3.2.0",
+  "gulp-plumber": "^1.2.1",
+  "gulp-postcss": "^8.0.0",
+  "gulp-print": "^5.0.2",
+  "gulp-rename": "^2.0.0",
+  "gulp-replace": "^1.0.0",
+  "gulp-sass": "^4.1.0",
+  "gulp-size": "^3.0.0",
+  "gulp-sourcemaps": "^2.6.5",
+  "gulp-uglify": "^3.0.2",
+  "gulp-uglify-es": "^2.0.0",
+  "gulp-useref": "^4.0.1",
+  "gulp-webp": "^4.0.1",
+  "moment": "^2.27.0",
+  "penthouse": "^2.3.1",
+  "postcss-warn-cleaner": "^0.1.9"
+ },
+ "dependencies": {
+  "createjs": "^1.0.1",
+  "fg-loadcss": "^3.1.0",
+  "flexboxgrid": "^6.3.1",
+  "fontfaceobserver": "^2.1.0",
+  "jquery": "^3.5.1",
+  "jquery-modal": "^0.9.2",
+  "lazysizes": "^5.2.2",
+  "loadjs": "^4.2.0",
+  "picturefill": "^3.0.3",
+  "prismjs": "^1.21.0",
+  "tiny-cookie": "^2.3.2"
+ }
+}

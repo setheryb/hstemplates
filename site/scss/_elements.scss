@@ -1,0 +1,227 @@
+@import 'mixins';
+.button{
+    padding: .75rem 1.5rem;
+    border-radius: 3rem;
+    font-family: $font-fira-sans;
+    @include font-size(18px);
+    font-weight: 500;
+    transition: 300ms all ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+		border: none;
+    
+    &.teal{
+        background-color: $color-mint;
+        border: none;
+    }
+    &.white-outline {
+        border: 1px solid $color-white;
+        color: white;
+        padding: .3rem !important; 
+        &:hover{
+        }
+    }
+    
+    &.dark-blue{
+        color: $color-white;
+        background: $color-dark-blue;
+        
+        &:hover {
+            box-shadow: 0 10px 34px -8px rgba($color-dark-blue, .56);
+        }
+        
+        &.outline {
+            background: rgba($color-dark-blue, 0);
+            border: 2px solid $color-dark-blue;
+            border-radius: 3rem;
+            color: $color-dark-blue;
+            
+            &:hover {
+                background: rgba($color-dark-blue, .1);
+                box-shadow: none;
+            }
+        }
+    }
+    
+    &.dark-blue-outline {
+        border: 2px solid $color-dark-blue;
+        border-radius: 3rem;
+        color: $color-dark-blue;
+        
+        &:hover {
+            background: rgba($color-dark-blue, .2);
+        }
+    }
+    
+    &.blue{
+        color: $color-white;
+        background: $color-blue;
+        
+        &:hover {
+            background: darken($color-blue, 10%);
+            box-shadow: 0 10px 34px -8px rgba($color-blue, .56);
+        }
+        
+        &.outline {
+            background: rgba($color-blue, 0);
+            border: 2px solid $color-blue;
+            border-radius: 3rem;
+            color: $color-blue;
+            
+            &:hover {
+                background: rgba($color-blue, .1);
+                box-shadow: none;
+            }
+        }
+    }
+    
+    &.blue-outline {
+        border: 2px solid $color-blue;
+        border-radius: 3rem;
+        color: $color-blue;
+        
+        &:hover {
+            background: rgba($color-blue, .2);
+        }
+    }
+
+    &.pink{
+        color: $color-white;
+        background: $color-pink;
+        text-align: center;
+        
+        &:hover {
+            background: darken($color-pink, 5%);
+            box-shadow: 0 10px 34px -8px rgba($color-pink, .56);
+        }
+        
+        &.outline {
+            background: rgba($color-pink, 0);
+            border: 2px solid $color-pink;
+            border-radius: 3rem;
+            color: $color-pink;
+            
+            &:hover {
+                background: rgba($color-pink, .1);
+                box-shadow: none;
+            }
+        }
+    }
+    &.pink-nav{
+        background: $color-pink;
+        border-radius: 3rem;
+        text-align: center;
+    }
+    &.pink-outline{
+        border: 2px solid $color-pink;
+        border-radius: 3rem;
+        color: $color-pink;
+        
+        &:hover {
+            background: rgba($color-pink, .1);
+            box-shadow: none;
+        }
+    }
+   
+    &.mint {
+        color: $color-dark-blue;
+        background: $color-mint;
+        text-align: center;
+         
+        &:hover {
+            background: darken($color-mint, 5%);
+            box-shadow: 0 10px 34px -8px rgba($color-mint, .6);
+        }
+         
+        &.outline {
+            background: rgba($color-mint, 0);
+            border: 2px solid $color-mint;
+            border-radius: 3rem;
+            color: white;
+             
+            &:hover {
+                background: rgba($color-mint, .25);
+                box-shadow: none;
+            }
+        }
+    }
+    
+    &.darkPink{
+        color: $color-white;
+        background: $color-dark-pink;
+        text-align: center;
+        
+        &:hover {
+            background: darken($color-dark-pink, 5%);
+            box-shadow: 0 10px 34px -8px rgba($color-dark-pink, .56);
+        }
+        
+        &.outline {
+            background: rgba($color-dark-pink, 0);
+            border: 2px solid $color-dark-pink;
+            border-radius: 3rem;
+            color: $color-dark-pink;
+            
+            &:hover {
+                background: rgba($color-dark-pink, .1);
+                box-shadow: none;
+            }
+        }
+    }
+    
+    &.white {
+        color: $color-dark-blue;
+        background: white;
+        text-align: center;
+        
+        &:hover {
+            background: darken(white, 5%);
+
+            box-shadow: 0 10px 34px -8px rgba(white, .56);
+        }
+        
+        &.outline {
+            background: rgba(white, 0);
+            border: 2px solid white;
+            border-radius: 3rem;
+            color: white;
+            
+            &:hover {
+                background: rgba(white, .1);
+            }
+        }
+    }
+    
+    &.no-button {
+
+        &.blue{ 
+            background: rgba($color-blue, 0);
+            color: $color-blue;
+            
+            &:hover {
+                background: rgba($color-blue, .2);
+                box-shadow: none;
+            }
+        }
+								
+				&.pink { 
+					background: rgba($color-pink, 0);
+					color: $color-pink;
+					
+					&:hover {
+							background: rgba($color-pink, .2);
+							box-shadow: none;
+					}
+				}
+				
+				&.dark-blue { 
+					background: rgba($color-dark-blue, 0);
+					color: $color-dark-blue;
+					
+					&:hover {
+							background: rgba($color-dark-blue, .2);
+							box-shadow: none;
+					}
+				}
+    }
+}

@@ -1,0 +1,120 @@
+@import 'mixins';
+html {
+	@media (max-width: 43em) {
+		position: relative;
+		overflow-x: hidden;
+	}
+}
+body{
+		background-color: #FDFDFD;
+    font-family: $system-font;
+    color: $color-black;
+    font-size: 1rem;
+		@media (max-width: 43em) {
+			position: relative;
+			width: 100vw;
+			max-width: 100vw;
+			overflow-x: hidden;
+		}
+    .embed-container{
+        position: relative;  
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 5em;
+    }
+    
+    /* responsive video container */
+    .embed-container iframe, .embed-container object, .embed-container embed 
+    { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
+    }
+
+    a {
+       text-decoration: none;
+			touch-action: manipulation;
+    }
+		
+	&.no-scroll {
+		overflow: hidden;
+	}
+	
+	.anchor-tag {
+		scroll-margin-top: 8.4rem;
+		
+		@media (max-width: 43em) {
+			scroll-margin-top: 3.8rem;
+		}
+	}
+	
+}
+
+header {}
+
+.footer{}
+
+.customer-logos {
+	grid-column: 1 / -1;
+	margin: 3rem 0;
+	padding: 3rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(0.25turn, #caf0fb, #61d3f5);
+	
+	h3 {
+		width: calc(100% - 2rem);
+		max-width: 1450px;
+		padding: 0;
+		@media (max-width: 43em) {
+			margin-bottom: 2rem;	
+		}
+	}
+	
+	.listingHolder{			
+		display: flex;
+		flex-wrap: wrap;
+		padding: 3rem 1rem 0;
+		// width: 80%;
+		width: 100%;
+		max-width: 1450px;
+		
+		
+		@media (max-width: 43em) {
+			display: grid;
+			/* autoprefixer: ignore next */
+			grid-gap: 1rem;
+			/* autoprefixer: ignore next */
+			grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			width: calc(100% - 2rem);
+			padding: 0 1rem;
+			// min-height: ;
+		}
+		
+
+		.listing{
+			width: calc(100% / 4);
+			margin: 0 0 2rem 0;
+			text-align: center;
+			text-decoration: none;
+			justify-self: center;
+			align-self: center;
+			padding: 1.5rem 0;
+			
+			@media (max-width: 60em) {
+				width: calc(100% / 3);
+			}
+			
+			@media (max-width: 43em) {
+				width: unset;
+				padding: .5rem 0;
+			}
+		}    	
+	}
+}
