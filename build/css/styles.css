@@ -5075,7 +5075,11 @@ body.template1 {
               flex-direction: column;
       -webkit-flex-wrap: nowrap;
           -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; }
+              flex-wrap: nowrap;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
       body.template1 .header .header-container img {
         width: 42rem; }
   body.template1 .customer-logos {
