@@ -22,7 +22,7 @@
 		</div>
 	</div>
 	
-	<div class="customer-logos">
+	<div class="customer-logos mint">
 		<ul class="logos">
 			<li><img src="assets/images/coca-cola-logo.svg" />
 			<li><img src="assets/images/mcdonalds-logo.svg" />
@@ -43,7 +43,7 @@
 			<ul>
 				<li>Consectetur adipiscing elit duis tristique.</li>
 				<li>Eleifend donec pretium vulputate sapien.</li>
-				<li>Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat.</li>
+				<li>Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Pellentesque cras tincidunt lobortis feugiat. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat.</li>
 				<li>In pellentesque massa placerat duis ultricies.</li>
 			</ul>
 		</div>
@@ -53,21 +53,21 @@
 		<h4>Features &amp; Benefits</h4>
 		<h2>With HSI, possibilities are possible.</h2>
 		<div class="feature">
-			<div class="icon">
+			<div class="icon pink">
 				<i class="fas fa-camera"></i>
 			</div>
 			<h5>Engage your workforce on quality</h5>
 			<p>Employees can log an incident from the job site or the scene of the incident, recording data in real-time, giving access for all.</p>
 		</div>
 		<div class="feature">
-			<div class="icon">
+			<div class="icon blue">
 				<i class="far fa-compass"></i>
 			</div>
 			<h5>Engage your workforce on quality</h5>
 			<p>Employees can log an incident from the job site or the scene of the incident, recording data in real-time, giving access for all.</p>
 		</div>
 		<div class="feature">
-			<div class="icon">
+			<div class="icon mint">
 				<i class="fab fa-airbnb"></i>
 			</div>
 			<h5>Engage your workforce on quality</h5>
@@ -94,7 +94,7 @@
 	
 	<div class="customer-reviews">
 		<h4>Remote Skills Verification</h4>
-		<h2>Providing complex solutions for the <span>simplest of problems</span>.</h2>
+		<h2>Read what companies like yours have to say</h2>
 		<div class="review-container">
 			<div class="review">
 				<img class="logo" src="assets/images/google-logo.svg" />
@@ -107,7 +107,7 @@
 			</div>
 			<div class="review">
 				<img class="logo" src="assets/images/google-logo.svg" />
-				<p class="quote">An effective and user friendly platform for staff training. Reports are easy to read. Great communication, product knowledge and service from the HSI staff members.</p>
+				<p class="quote">It is easily accessible for all employees in the business and regardless of their relationship. It is also environmentally friendly as previously hard copies had to be sent to an archive run by McDonald's for a minimum of 7 years. Now, this system stores it on the cloud and automatically deletes files about WHS and incidents that occur.</p>
 				
 				<div class="reviewer">
 					<p class="reviewer-name">Adit A.</p>
@@ -115,10 +115,10 @@
 				</div>
 			</div>
 			<div class="review">
-				<p class="quote">An effective and user friendly platform for staff training. Reports are easy to read. Great communication, product knowledge and service from the HSI staff members.</p>
+				<p class="quote">We manage more than 50 businesses' safety needs using this system and it certainly makes it easy for us to keep an eye on our customers and react to 
+					their needs.</p>
 				
 				<div class="reviewer">
-					<img class="reviewer-pic" src="https://www.fillmurray.com/48/48" />
 					<p class="reviewer-name">Shayne C.</p>
 					<p class="reviewer-title">Managing Director</p>
 				</div>

@@ -61,12 +61,12 @@ header {}
 .customer-logos {
 	grid-column: 1 / -1;
 	margin: 3rem 0;
-	padding: 3rem 0;
+	padding: 1rem 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	background: linear-gradient(0.25turn, #caf0fb, #61d3f5);
+	background: none;
 	
 	h3 {
 		width: calc(100% - 2rem);
@@ -77,10 +77,12 @@ header {}
 		}
 	}
 	
-	.listingHolder{			
+	.listingHolder, ul{			
 		display: flex;
-		flex-wrap: wrap;
-		padding: 3rem 1rem 0;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
 		// width: 80%;
 		width: 100%;
 		max-width: 1450px;
@@ -98,14 +100,14 @@ header {}
 		}
 		
 
-		.listing{
-			width: calc(100% / 4);
-			margin: 0 0 2rem 0;
+		.listing, li{
+			// width: calc(100% / 4);
+			margin: 0 0 0 0;
 			text-align: center;
 			text-decoration: none;
 			justify-self: center;
 			align-self: center;
-			padding: 1.5rem 0;
+			// padding: 1.5rem 0;
 			
 			@media (max-width: 60em) {
 				width: calc(100% / 3);
