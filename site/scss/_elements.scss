@@ -10,24 +10,13 @@
     display: inline-block;
 		border: none;
     
-    &.teal{
-        background-color: $color-mint;
-        border: none;
-    }
-    &.white-outline {
-        border: 1px solid $color-white;
-        color: white;
-        padding: .3rem !important; 
-        &:hover{
-        }
-    }
-    
     &.dark-blue{
         color: $color-white;
         background: $color-dark-blue;
         
         &:hover {
-            box-shadow: 0 10px 34px -8px rgba($color-dark-blue, .56);
+            // box-shadow: 0 10px 34px -8px rgba($color-dark-blue, .56);
+						background: lighten($color-blue, 10%);
         }
         
         &.outline {
@@ -37,29 +26,19 @@
             color: $color-dark-blue;
             
             &:hover {
-                background: rgba($color-dark-blue, .1);
+                background: rgba($color-dark-blue, .2);
                 box-shadow: none;
             }
         }
     }
-    
-    &.dark-blue-outline {
-        border: 2px solid $color-dark-blue;
-        border-radius: 3rem;
-        color: $color-dark-blue;
-        
-        &:hover {
-            background: rgba($color-dark-blue, .2);
-        }
-    }
-    
+   
     &.blue{
         color: $color-white;
         background: $color-blue;
         
         &:hover {
             background: darken($color-blue, 10%);
-            box-shadow: 0 10px 34px -8px rgba($color-blue, .56);
+            // box-shadow: 0 10px 34px -8px rgba($color-blue, .56);
         }
         
         &.outline {
@@ -74,16 +53,6 @@
             }
         }
     }
-    
-    &.blue-outline {
-        border: 2px solid $color-blue;
-        border-radius: 3rem;
-        color: $color-blue;
-        
-        &:hover {
-            background: rgba($color-blue, .2);
-        }
-    }
 
     &.pink{
         color: $color-white;
@@ -91,8 +60,8 @@
         text-align: center;
         
         &:hover {
-            background: darken($color-pink, 5%);
-            box-shadow: 0 10px 34px -8px rgba($color-pink, .56);
+            background: darken($color-pink, 10%);
+            // box-shadow: 0 10px 34px -8px rgba($color-pink, .56);
         }
         
         &.outline {
@@ -107,21 +76,6 @@
             }
         }
     }
-    &.pink-nav{
-        background: $color-pink;
-        border-radius: 3rem;
-        text-align: center;
-    }
-    &.pink-outline{
-        border: 2px solid $color-pink;
-        border-radius: 3rem;
-        color: $color-pink;
-        
-        &:hover {
-            background: rgba($color-pink, .1);
-            box-shadow: none;
-        }
-    }
    
     &.mint {
         color: $color-dark-blue;
@@ -129,8 +83,8 @@
         text-align: center;
          
         &:hover {
-            background: darken($color-mint, 5%);
-            box-shadow: 0 10px 34px -8px rgba($color-mint, .6);
+            background: darken($color-mint, 20%);
+            // box-shadow: 0 10px 34px -8px rgba($color-mint, .6);
         }
          
         &.outline {
@@ -146,14 +100,14 @@
         }
     }
     
-    &.darkPink{
+    &.dark-pink{
         color: $color-white;
         background: $color-dark-pink;
         text-align: center;
         
         &:hover {
-            background: darken($color-dark-pink, 5%);
-            box-shadow: 0 10px 34px -8px rgba($color-dark-pink, .56);
+            background: lighten($color-dark-pink, 10%);
+            // box-shadow: 0 10px 34px -8px rgba($color-dark-pink, .56);
         }
         
         &.outline {
@@ -175,9 +129,9 @@
         text-align: center;
         
         &:hover {
-            background: darken(white, 5%);
+            background: darken(white, 20%);
 
-            box-shadow: 0 10px 34px -8px rgba(white, .56);
+            // box-shadow: 0 10px 34px -8px rgba(white, .56);
         }
         
         &.outline {
@@ -203,6 +157,17 @@
                 box-shadow: none;
             }
         }
+				
+				&.mint{ 
+					background: rgba($color-mint, 0);
+					color: $color-mint;
+					
+					&:hover {
+							background: rgba($color-mint, .2);
+							box-shadow: none;
+					}
+			}
+				
 								
 				&.pink { 
 					background: rgba($color-pink, 0);
@@ -220,6 +185,26 @@
 					
 					&:hover {
 							background: rgba($color-dark-blue, .2);
+							box-shadow: none;
+					}
+				}
+				
+				&.dark-pink { 
+					background: rgba($color-dark-pink, 0);
+					color: $color-dark-pink;
+					
+					&:hover {
+							background: rgba($color-dark-pink, .2);
+							box-shadow: none;
+					}
+				}
+				
+				&.white { 
+					background: rgba($color-white, 0);
+					color: $color-white;
+					
+					&:hover {
+							background: rgba($color-white, .2);
 							box-shadow: none;
 					}
 				}

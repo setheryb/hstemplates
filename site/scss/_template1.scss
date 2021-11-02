@@ -10,28 +10,216 @@ body {
 		.header {
 			grid-column: 1 / -1;
 			
-			display: grid;
-			grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(1rem, 1fr);
-			grid-auto-rows: minmax(100px,auto);
+			// display: grid;
+			// grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(1rem, 1fr);
+			// grid-auto-rows: minmax(100px,auto);
+			display: flex;
+			flex-flow: column nowrap;
+			position: relative;	
+			margin-bottom: 2rem;
+
 			
 			.header-container {
-				grid-column: 2 / 3;
-				
+				box-sizing: border-box;
+				width: 100%;
+				max-width: 60rem;
+				margin: 0 auto;
 				display: flex;
 				flex-direction: column;
 				flex-wrap: nowrap;
 				align-items: center;
+				position: relative;
+				z-index: 1;
+				padding: 2rem 1rem 0;
 				
-				.logo {}
+				.logo {
+					width: 5rem;
+					height: 3.5rem;
+					background-image: url(../images/hsi-logo-white.svg);
+					background-size: contain;
+					background-repeat: no-repeat;
+					text-indent: -9100rem;
+					overflow: hidden;
+					margin-bottom: 3rem;
+				}
 				
-				h1 {}
+				h1 {
+					font-family: $font-fira-sans;
+					font-weight: 500;
+					@include font-size(56px);
+					margin-bottom: 1rem;
+					text-align: center;
+				}
 				
-				h4 {}
+				h4 {
+					font-family: $font-fira-sans;
+					font-weight: 600;
+					@include font-size(16px);
+					text-transform: uppercase;
+					letter-spacing: 1.14px;
+					margin-bottom: 1rem;
+					text-align: center;
+				}
 				
-				p {}
+				p {
+					font-family: $system-font;
+					@include font-size(32px);
+					font-weight: 300;
+					text-align: center;
+					margin-bottom: 2rem;
+				}
+				
+				.buttons {
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: center;
+					
+					@media (max-width: 43em) {
+						flex-flow: row wrap;
+					}
+					
+					.button {
+						margin-left: 1.5rem;
+						
+						&:first-of-type {
+							margin-left: unset;
+						}
+						
+						@media (max-width: 43em) {
+							margin: .5rem 0;	
+							
+							&:first-of-type {
+								margin-top: unset;
+							}
+							
+							&:nth-last-of-type {
+								margin-bottom: unset;
+							}
+						}
+					}
+					
+				}
 				
 				img {
 					width: 42rem;
+					margin-top: 2rem;
+					
+					@media (max-width: 43em) {
+						width: 100%;	
+					}
+				}
+			}
+			
+			.curved-bottom {
+				fill: #fdfdfd;
+				position: absolute;
+				z-index: 0;
+				bottom: 0;
+				width: 100%;
+			}
+			
+			&.pink {
+				background: #F70C60;
+				background: linear-gradient(137deg, #F70C60 0%, #890C58 100%);
+				
+				.logo {
+					background-image: url(../images/hsi-logo-white.svg);
+				}
+				
+				h1 {
+					color: $color-white;
+				}
+				
+				h4 {
+					color: $color-white;
+				}
+				
+				p {
+					color: $color-white;
+				}
+			}
+			
+			&.bright-blue {
+				background: $color-blue;
+				background: linear-gradient(-41deg, #4899F1 0%, #96FFE9 100%);
+				
+				.logo {
+					background-image: url(../images/hsi-logo-blue.svg);
+				}
+				
+				h1 {
+					color: $color-dark-blue;
+				}
+				
+				h4 {
+					color: $color-dark-blue;
+				}
+				
+				p {
+					color: $color-dark-blue;
+				}
+			}
+			
+			&.blue {
+				background: #6739F9;
+				background: linear-gradient(144deg, #2F90FF 15%, #6739F9 69%);
+				
+				.logo {
+					background-image: url(../images/hsi-logo-white.svg);
+				}
+				
+				h1 {
+					color: $color-white;
+				}
+				
+				h4 {
+					color: $color-white;
+				}
+				
+				p {
+					color: $color-white;
+				}
+			}
+			
+			&.green {
+				background: #11998E;
+				background: linear-gradient(-42deg, #11998E 19%, #38EF7D 95%);
+				
+				.logo {
+					background-image: url(../images/hsi-logo-blue.svg);
+				}
+				
+				h1 {
+					color: $color-dark-blue;
+				}
+				
+				h4 {
+					color: $color-dark-blue;
+				}
+				
+				p {
+					color: $color-dark-blue;
+				}
+			}
+			
+			&.orange {
+				background: #FE6461;
+				background: linear-gradient(-31deg, #FE6461 4%, #F8896F 91%);
+				
+				.logo {
+					background-image: url(../images/hsi-logo-white.svg);
+				}
+				
+				h1 {
+					color: $color-white;
+				}
+				
+				h4 {
+					color: $color-white;
+				}
+				
+				p {
+					color: $color-white;
 				}
 			}
 		}
@@ -76,11 +264,15 @@ body {
 		.two-sides {
 			grid-column: 2 / 3;
 			display: flex;
-			flex: row wrap;
+			flex-flow: row wrap;
 			justify-content: space-between;
 			align-items: center;
 			
 			margin: 3.25rem 0;
+			
+			@media (max-width: 43em) {
+				margin: 2rem 0;
+			}
 			
 			&.left, &.right {
 				
@@ -145,6 +337,10 @@ body {
 							// }
 						}
 					}
+					
+					@media (max-width: 43em) {
+						width: 100%;	
+					}
 				}
 				
 				.image {
@@ -155,17 +351,23 @@ body {
 					justify-content: center;
 					position: relative;
 					z-index: 1;
+					filter: drop-shadow(0px 0px .25rem rgba(0,0,0,0.4));
+					
+					@media (max-width: 43em) {
+						width: 100%;	
+					}
 					
 					&:after {
 						content: '';
 						display: block;
 						width: 402px;
 						height: 417px;
-						background: linear-gradient(144deg, #2F90FF 6%, #6739F9 89%);
+						// background: #6739F9;
+						// background: linear-gradient(144deg, #2F90FF 6%, #6739F9 89%);
 						background-repeat: none;
 						mask-repeat: no-repeat;
 						mask-size: contain;
-						mask-image: url(../images/image-bg-crop-1.svg);
+						// mask-image: url(../images/image-bg-crop-1.svg);
 						position: absolute;
 						margin-left: auto;
 						margin-right: auto;
@@ -173,18 +375,137 @@ body {
 						left: -2rem;
 						right: 0;
 						z-index: -1;
-
-						box-shadow: 0 0 15px 0 rgba(0,0,0,0.23);
 					}
 					
 					img {
-						mask-image: url(../images/image-crop-1.svg);
 						mask-repeat: no-repeat;
 						mask-position: center;
+						mask-size: contain;
 						width: 25rem;
 						height: 25rem;
 						object-fit: cover;
-						box-shadow: 0 0 15px 0 rgba(0,0,0,0.23);
+						
+						
+					}
+					
+					&.no-shadow {
+						filter: none;
+					}
+					
+					&.no-crop {
+						mask-image: none;
+					}
+					
+					&.crop-1 {
+						img {
+							mask-image: url(../images/image-crop-1.svg);
+						}
+					}
+					
+					&.crop-2 {
+						img {
+							mask-image: url(../images/image-crop-2.svg);
+						}
+					}
+					
+					&.crop-3 {
+						img {
+							mask-image: url(../images/image-crop-3.svg);
+						}
+					}
+					
+					&.crop-4 {
+						img {
+							mask-image: url(../images/image-crop-4.svg);
+						}
+					}
+					
+					&.crop-5 {
+						img {
+							mask-image: url(../images/image-crop-5.svg);
+						}
+					}
+					
+					&.crop-6 {
+						img {
+							mask-image: url(../images/image-crop-6.svg);
+						}
+					}
+					
+					&.no-bg {
+						&:after {
+							mask-image: none;
+							background: none;
+							box-shadow: none;
+							display: none;
+						}
+					}
+					
+					&.bg-1 {
+						&:after {
+							mask-image: url(../images/image-bg-crop-1.svg);
+							top: -.25rem;
+							left: -2rem;
+						}
+					}
+					
+					&.bg-2 {
+						&:after {
+							mask-image: url(../images/image-bg-crop-2.svg);
+							top: 0rem;
+							left: -1rem;
+						}
+					}
+					
+					&.bg-3 {
+						&:after {
+							mask-image: url(../images/image-bg-crop-3.svg);
+							top: -1rem;
+							left: 2rem;
+						}
+					}
+					
+					&.bg-4 {
+						&:after {
+							mask-image: url(../images/image-bg-crop-4.svg);
+							top: 0rem;
+							left: 0rem;
+						}
+					}
+					
+					&.pink {
+						&:after {
+							background: #F70C60;
+							background: linear-gradient(137deg, #F70C60 0%, #890C58 100%);
+						}
+					}
+					
+					&.bright-blue {
+						&:after {
+							background: $color-blue;
+							background: linear-gradient(-41deg, #4899F1 0%, #96FFE9 100%);
+						}
+					}
+					
+					&.blue {
+						&:after {
+							background: #6739F9;
+							background: linear-gradient(144deg, #2F90FF 15%, #6739F9 69%);
+						}
+					}
+					
+					&.green {
+						&:after {
+							background: #11998E;
+							background: linear-gradient(-42deg, #11998E 19%, #38EF7D 95%);
+						}
+					}
+					
+					&.orange {
+						&:after {
+							background: #FE6461;
+							background: linear-gradient(-31deg, #FE6461 4%, #F8896F 91%);
+						}
 					}
 				}
 			}
@@ -193,6 +514,9 @@ body {
 				
 				.text {
 					order: 2;
+					@media (max-width: 43em) {
+						margin-top: 2.5rem;
+					}
 				}
 				
 				.image {
@@ -252,6 +576,11 @@ body {
 				flex-flow: column nowrap;
 				justify-content: flex-start;
 				align-items: center;
+				
+				@media (max-width: 43em) {
+					width: 100%;
+					margin-bottom: 1.5rem;
+				}
 				
 				.icon {
 					width: 7rem;
@@ -486,9 +815,14 @@ body {
 		
 		.hsi-video {
 			grid-column: 2 / 3;
-			margin: 3.25rem 0;
+			margin: 3.25rem 0 8rem;
+			border-radius: .5rem;
+			overflow: hidden;
 			
 			.embed-container {
+				border-radius: .5rem;
+				overflow: hidden;
+				margin-bottom: unset;
 				
 				iframe {}
 			}

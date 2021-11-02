@@ -11,15 +11,22 @@
 </head>
 
 <body class="template1">
-	<div class="header">
+	<div class="header blue">
 		<div class="header-container">
 			<span class="logo">HSI</span>
 			<h4>Free and easy to use</h4>
 			<h1>Looking for the Slips, Trips, & Falls checklist and online course?</h1>
 			<p>We’re letting everyone have access to our slips, trips, and falls checklist and online safety training course…for free!</p>
-			<a class="button white blue-text">Get your free white paper</a>
+			<div class="buttons">
+				<a class="button white">Get your free white paper</a>
+				<a class="button white outline">Get your free white paper</a>
+				<a class="button white no-button">Get your free white paper</a>
+			</div>
 			<img src="assets/images/ipad-holder.png" />
 		</div>
+		<svg class="curved-bottom" viewBox="0 0 1280 225">
+			<path id="Rectangle" d="M0,0 C132.063492,105.875 345.383598,158.8125 639.960317,158.8125 C934.537037,158.8125 1147.8836,105.875 1280,0 L1280,389 L0,389 L0,0 Z"></path>
+		</svg>
 	</div>
 	
 	<div class="customer-logos mint">
@@ -33,7 +40,7 @@
 	</div>
 	
 	<div class="two-sides left">
-		<div class="image">
+		<div class="image crop-2 bg-4 orange">
 			<img src="http://www.fillmurray.com/400/400" />
 		</div>
 		<div class="text">
@@ -76,7 +83,7 @@
 	</div>
 	
 	<div class="two-sides right">
-		<div class="image">
+		<div class="image crop-3 bg-1">
 			<img src="http://www.fillmurray.com/401/400" />
 		</div>
 		<div class="text">
