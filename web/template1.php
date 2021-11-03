@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Landing Page Meta Description" />
 	<link href="assets/css/styles.min.css" rel="stylesheet" />
-
+	<script src="https://kit.fontawesome.com/62d1753594.js" crossorigin="anonymous"></script>
 	<title>Landing Page Title | HSI</title>
 </head>
 
