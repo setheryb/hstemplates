@@ -134,7 +134,7 @@
 	</div>
 	
 	<div class="hsi-video">
-		<div class='embed-container' ><iframe src='https://player.vimeo.com/video/455367558' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+		<div class='embed-container' ><iframe src='https://player.vimeo.com/video/455367558' width='1920' height='1080' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
 	</div>
 	
 	<div class="form-footer">
