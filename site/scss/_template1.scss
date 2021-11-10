@@ -269,7 +269,8 @@ html {
 				justify-content: space-between;
 				align-items: center;
 				
-				margin: 3.25rem 0;
+				margin: 3.25rem auto;
+				max-width: 75rem;
 				
 				@media (max-width: 43em) {
 					margin: 2rem 0;
@@ -331,7 +332,9 @@ html {
 						}
 						
 						@media (max-width: 43em) {
-							width: 100%;	
+							box-sizing: border-box;
+							width: 100%;
+							padding: 0 1rem;
 						}
 					}
 					
@@ -527,11 +530,17 @@ html {
 			
 			.feature-benefit {
 				grid-column: 2 / 3;
-				margin: 3.25rem 0;
+				margin: 3.25rem auto;
+				max-width: 75rem;
 				
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: space-between;
+				
+				@media (max-width: 43em) {
+					box-sizing: border-box;
+					padding: 0 1rem;
+				}
 				
 				h4 {
 					font-family: $font-fira-sans;
@@ -730,7 +739,8 @@ html {
 						
 						display: grid;
 						grid-template-columns: auto;
-						grid-template-rows: 3rem 1fr 3.75rem;
+						grid-template-rows: 3rem 1fr minmax(0,4.5rem);
+						align-items: flex-start;
 						
 						.logo {
 							grid-row: 1/2;
@@ -779,19 +789,27 @@ html {
 							align-items: center;
 							
 							.reviewer-name {
-								width: calc(99% - 3rem);
+								width: 100%;
 								font-family: $font-fira-sans;
 								font-weight: 500;
 								color: $color-dark-blue;
 								@include font-size(18px);
+								
+								@media (max-width: 43em) {
+									width: 100%;
+								}
 							}
 							
 							.reviewer-title {
-								width: calc(99% - 3rem);
+								width: 100%;
 								margin: .5rem 0 0 0;
 								font-family: $font-fira-sans;
 								@include font-size(14px);
 								color: $color-blog-body;
+								
+								@media (max-width: 43em) {
+									width: 100%;
+								}
 							}
 							
 							.reviewer-pic {
@@ -804,9 +822,15 @@ html {
 			
 			.hsi-video {
 				grid-column: 2 / 3;
-				margin: 3.25rem 0 8rem;
+				margin: 3.25rem auto 8rem;
 				border-radius: .5rem;
 				overflow: hidden;
+				max-width: 75rem;
+				
+				@media (max-width: 43em) {
+					margin: 2.5rem 0 5rem;
+					padding: 0 1rem;
+				}
 				
 				.embed-container {
 					border-radius: .5rem;
@@ -817,114 +841,539 @@ html {
 				}
 			}
 			
-			.form-footer {
-				grid-column: 1 / -1;
-				// margin: 3.25rem 0 0;
-				padding: 4rem 0 2rem;
-				
-				display: grid;
-				grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
-				grid-auto-rows: auto;
-	
+			.footer-container-wrapper{
 				background-image: linear-gradient(170deg, #2B4079 0%, #0F1831 100%);
+				grid-column: 1 / -1;
 				
-				h2,h3 {
-					grid-column: 2 / 3;
+				.form-footer {
+					box-sizing: border-box;
+					padding: 4rem 0 2rem;
 					
-					font-family: $font-fira-sans;
-					@include font-size(32px);
-					color: $color-white;
-					font-weight: 500;
-					letter-spacing: .015625rem;
-					text-align: center;
-				}
-				
-				form, .hbspt-form {
-					grid-column: 2 / 3;
-					fieldset {
-						// margin: 1rem 0;
-						
-						&.form-columns-2 {
-							display: flex;
-							flex-flow: row wrap;
-							
-							div {
-								width: 100% !important;
-							}
-						}
+					width: 100%;
+					max-width: 30rem;
 					
-						label {
-							font-weight: 600;
-							@include font-size(16px);
-							color: rgba($color-white, .55);
-							margin: 1rem 0 0;
-							display: inline-block;
-							
-							&.hs-error-msg {
-								color: $color-mint;
-								margin: unset;
-							}
-						}
+					margin: 3rem auto 0;
+					padding: 0 1rem;
+					float: unset;
+					// display: grid;
+					// grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+					// grid-auto-rows: auto;
+		
+					// background-image: linear-gradient(170deg, #2B4079 0%, #0F1831 100%);
+					
+					h2,h3 {
+						grid-column: 2 / 3;
 						
-						.hs-richtext {
-							p {
-								font-family: $system-font;
-								@include font-size(14px);
-								font-weight: 300;
-								color: rgba($color-white, .50);
-								letter-spacing: 0.015625rem;
-								line-height: 1.5rem;
-								margin: 1rem 0;
+						font-family: $font-fira-sans;
+						@include font-size(32px);
+						color: $color-white;
+						font-weight: 500;
+						letter-spacing: .015625rem;
+						text-align: center;
+					}
+					
+					form, .hbspt-form {
+						grid-column: 2 / 3;
+						fieldset {
+							// margin: 1rem 0;
+							
+							&.form-columns-2 {
+								display: flex;
+								flex-flow: row wrap;
 								
-								a {
-									color: rgba($color-white, .60);
+								div {
+									width: 100% !important;
+								}
+							}
+						
+							label {
+								font-weight: 600;
+								@include font-size(16px);
+								color: rgba($color-white, .55);
+								margin: 1rem 0 0;
+								display: inline-block;
+								
+								&.hs-error-msg {
+									color: $color-mint;
+									margin: unset;
+								}
+							}
+							
+							.hs-richtext {
+								p {
+									font-family: $system-font;
+									@include font-size(14px);
+									font-weight: 300;
+									color: rgba($color-white, .50);
+									letter-spacing: 0.015625rem;
+									line-height: 1.5rem;
+									margin: 1rem 0;
 									
-									&:link, &:visited {
-										text-decoration: underline;
+									a {
+										color: rgba($color-white, .60);
+										
+										&:link, &:visited {
+											text-decoration: underline;
+										}
+										
+										&:hover, &:active {
+											text-decoration: none;
+										}
 									}
-									
-									&:hover, &:active {
-										text-decoration: none;
-									}
+								}
+							}
+						}
+						
+						input, select {
+							width: 100% !important;
+							background: rgba($color-white, .85);
+							padding: 1rem .75rem;
+							margin: .5rem 0;
+							border: none;
+							border-radius: .25rem;
+							@include font-size(16px);
+							border: .25rem solid rgba($color-mint, 0);
+							transition: border 300ms ease-in-out;
+							
+							&.invalid, &.error {
+								border: .25rem solid $color-mint;
+							}
+							
+							&[type=submit] {
+								width: calc(100% - .25rem);
+								border-radius: 25rem;
+								background: $color-mint;
+								font-family: $font-fira-sans;
+								@include font-size(18px);
+								font-weight: 500;
+								border: .125rem solid $color-mint;
+								cursor: pointer;
+								transition: all 300ms ease-in-out;
+								
+								&:hover {
+									background: rgba($color-mint, .3);
+									color: $color-mint;
+									border: .125rem solid $color-mint;
 								}
 							}
 						}
 					}
 					
-					input, select {
-						width: 100% !important;
-						background: rgba($color-white, .85);
-						padding: 1rem .75rem;
-						margin: .5rem 0;
-						border: none;
-						border-radius: .25rem;
-						@include font-size(16px);
-						border: .25rem solid rgba($color-mint, 0);
-						transition: border 300ms ease-in-out;
+					.footer {
+						grid-column: 2 / 3;
+						display: flex;
+						flex-flow: column nowrap;
+						align-items: center;
 						
-						&.invalid, &.error {
-							border: .25rem solid $color-mint;
+						.logo {
+							
+							margin-top: 4rem;
+							text-indent: -9100rem;
+							overflow: hidden;
+							background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
+							background-repeat: no-repeat;
+							background-size: contain;
+							width: 3rem;
+							height: 2rem;
 						}
 						
-						&[type=submit] {
-							width: calc(100% - .25rem);
-							border-radius: 25rem;
-							background: $color-mint;
-							font-family: $font-fira-sans;
-							@include font-size(18px);
-							font-weight: 500;
-							border: .125rem solid $color-mint;
-							cursor: pointer;
-							transition: all 300ms ease-in-out;
+						p {
+							font-family: $system-font;
+							@include font-size(14px);
+							font-weight: 300;
+							color: rgba($color-white, .50);
+							letter-spacing: 0.015625rem;
+							line-height: 1.5rem;
+							text-align: center;
+							margin: 1rem 0;
 							
-							&:hover {
-								background: rgba($color-mint, .3);
-								color: $color-mint;
-								border: .125rem solid $color-mint;
+							a {
+								color: rgba($color-white, .60);
+								
+								&:link, &:visited {
+									text-decoration: underline;
+								}
+								
+								&:hover, &:active {
+									text-decoration: none;
+								}
 							}
 						}
 					}
 				}
+			}
+			div[id*="hs_form_target_form"] {
+				grid-column: 2/3;
+			}
+		}
+		
+		&.template1-ty {
+			min-height: 100vh;
+			display: grid;
+			grid-template-columns: minmax(1rem, 1fr) minmax(0, 60rem) minmax(1rem, 1fr);
+			grid-template-rows: 9rem 1fr 11rem;
+			
+			.header {
+				grid-column: 1 / -1;
+				grid-row: 1/2;
+				display: flex;
+				flex-flow: column nowrap;
+				position: relative;	
+				margin-bottom: 2rem;
+	
+				
+				.header-container {
+					box-sizing: border-box;
+					width: 100%;
+					max-width: 60rem;
+					margin: 0 auto;
+					display: flex;
+					flex-direction: column;
+					flex-wrap: nowrap;
+					align-items: center;
+					position: relative;
+					z-index: 1;
+					padding: 2rem 1rem 0;
+					
+					.logo {
+						width: 5rem;
+						height: 3.5rem;
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
+						background-size: contain;
+						background-repeat: no-repeat;
+						text-indent: -9100rem;
+						overflow: hidden;
+						margin-bottom: 3rem;
+					}
+					
+					h1 {
+						font-family: $font-fira-sans;
+						font-weight: 500;
+						@include font-size(56px);
+						margin-bottom: 1rem;
+						text-align: center;
+						line-height: 1.25;
+					}
+					
+					h4 {
+						font-family: $font-fira-sans;
+						font-weight: 600;
+						@include font-size(16px);
+						text-transform: uppercase;
+						letter-spacing: 1.14px;
+						// line-height: 1.18;
+						margin-bottom: 1rem;
+						text-align: center;
+					}
+					
+					p {
+						font-family: $system-font;
+						@include font-size(32px);
+						font-weight: 300;
+						text-align: center;
+						line-height: 1.25;
+						margin-bottom: 2rem;
+					}
+					
+					.buttons {
+						display: flex;
+						flex-flow: row nowrap;
+						justify-content: center;
+						
+						@media (max-width: 43em) {
+							flex-flow: row wrap;
+						}
+						
+						.button {
+							margin-left: 1.5rem;
+							
+							&:first-of-type {
+								margin-left: unset;
+							}
+							
+							@media (max-width: 43em) {
+								margin: .5rem 0;	
+								
+								&:first-of-type {
+									margin-top: unset;
+								}
+								
+								&:nth-last-of-type {
+									margin-bottom: unset;
+								}
+							}
+						}
+						
+					}
+					
+					img {
+						width: 42rem;
+						margin-top: 2rem;
+						
+						@media (max-width: 43em) {
+							width: 100%;	
+						}
+					}
+				}
+				
+				.curved-bottom {
+					fill: #fdfdfd;
+					position: absolute;
+					z-index: 0;
+					bottom: 0;
+					width: 100%;
+				}
+				
+				&.pink {
+					background: #F70C60;
+					background: linear-gradient(137deg, #F70C60 0%, #890C58 100%);
+					
+					.logo {
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
+					}
+					
+					h1 {
+						color: $color-white;
+					}
+					
+					h4 {
+						color: $color-white;
+					}
+					
+					p {
+						color: $color-white;
+					}
+				}
+				
+				&.bright-blue {
+					background: $color-blue;
+					background: linear-gradient(-41deg, #4899F1 0%, #96FFE9 100%);
+					
+					.logo {
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-blue.svg);
+					}
+					
+					h1 {
+						color: $color-dark-blue;
+					}
+					
+					h4 {
+						color: $color-dark-blue;
+					}
+					
+					p {
+						color: $color-dark-blue;
+					}
+				}
+				
+				&.blue {
+					background: #6739F9;
+					background: linear-gradient(144deg, #2F90FF 15%, #6739F9 69%);
+					
+					.logo {
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
+					}
+					
+					h1 {
+						color: $color-white;
+					}
+					
+					h4 {
+						color: $color-white;
+					}
+					
+					p {
+						color: $color-white;
+					}
+				}
+				
+				&.green {
+					background: #11998E;
+					background: linear-gradient(-42deg, #11998E 19%, #38EF7D 95%);
+					
+					.logo {
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-blue.svg);
+					}
+					
+					h1 {
+						color: $color-dark-blue;
+					}
+					
+					h4 {
+						color: $color-dark-blue;
+					}
+					
+					p {
+						color: $color-dark-blue;
+					}
+				}
+				
+				&.orange {
+					background: #FE6461;
+					background: linear-gradient(-31deg, #FE6461 4%, #F8896F 91%);
+					
+					.logo {
+						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
+					}
+					
+					h1 {
+						color: $color-white;
+					}
+					
+					h4 {
+						color: $color-white;
+					}
+					
+					p {
+						color: $color-white;
+					}
+				}
+			}
+			
+			.content {
+				grid-column: 2/3;
+				grid-row: 2/3;
+				
+				display: flex;
+				flex-flow: row wrap;
+				align-content: center;
+				
+				.pay-off {
+					display: flex;
+					flex-flow: row nowrap;
+					
+					justify-content: space-between;
+					align-items: center;
+					
+					margin: 1rem 0 2rem;
+					
+					img {
+						width: 49%
+					}
+					
+					.text-cta {
+						width: 46%;
+						
+						h1 {
+							font-family: $font-fira-sans;
+							font-weight: 500;
+							color: $color-dark-blue;
+							@include font-size(40px);
+						}
+						
+						p {
+							@include font-size(24px);
+							color: $color-blog-body;
+							font-weight: 300;
+							line-height: 1.32;
+							margin: .5rem 0;
+						}
+						
+						.button {
+							margin-top: 3rem;
+						}
+					}
+					
+					@media (max-width: 43em) {
+						flex-flow: row wrap;
+						margin-top: 0;
+						
+						img {
+							width: 100%;
+							margin-bottom: 1.5rem;
+						}
+						
+						.text-cta {
+							width: 100%;
+							text-align: center;
+							
+							.button {
+								box-sizing: border-box;
+								margin-top: 2rem;
+								width: 100%;
+							}
+						}
+					}
+				}
+				
+				.alt-promo {
+					background: $color-white;
+					box-shadow: 0 1px 8px -1px rgba(54,59,72,0.25), inset 0 1px 0 0 rgba(255,255,255,0.10);
+					border-radius: .5rem;
+					padding: 1.5rem;
+					margin: 2rem 0 3rem;
+					
+					display: flex;
+					flex-flow: row wrap;
+					justify-content: space-between;
+					align-items: center;
+					
+					h2 {
+						font-family: $font-fira-sans;
+						font-weight: 400;
+						color: $color-pink;
+						@include font-size(32px);
+						width: 100%;
+						margin-bottom: 1.5rem;
+					}
+					
+					p {
+						@include font-size(21px);
+						color: $color-blog-body;
+						font-weight: 300;
+						line-height: 1.32;
+						width: 64%;
+					}
+					
+					.actions {
+						width: 32%;
+						display: flex;
+						flex-flow: column nowrap;
+						
+						.button {
+							&:not(:first-of-type) {
+								margin-top: .75rem;
+							}
+						}
+					}
+					
+					@media (max-width: 43em) {
+						
+						h2, p, .actions {
+							width: 100%;
+							text-align: center;
+						}
+						
+						h2 {
+							@include font-size(24px);
+							font-weight: 500;
+						}
+						
+						p {
+							@include font-size(18px);
+							font-weight: 400;
+						}
+						
+						.actions {
+							margin-top: 1.5rem;
+						}
+					}
+				}
+			}
+			
+			.form-footer {
+				box-sizing: border-box;
+				grid-column: 1 / -1;
+				grid-row: 3/4;
+				// margin: 3.25rem 0 0;
+				// padding: 2rem 0;
+				
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+	
+				background-image: linear-gradient(170deg, #2B4079 0%, #0F1831 100%);
 				
 				.footer {
 					grid-column: 2 / 3;
@@ -934,7 +1383,7 @@ html {
 					
 					.logo {
 						
-						margin-top: 4rem;
+						// margin-top: 4rem;
 						text-indent: -9100rem;
 						overflow: hidden;
 						background-image: url(https://goto.hsi.com/hubfs/_customDev/hsi-logo-white.svg);
@@ -952,7 +1401,7 @@ html {
 						letter-spacing: 0.015625rem;
 						line-height: 1.5rem;
 						text-align: center;
-						margin: 1rem 0;
+						margin: 1rem 0 0 0;
 						
 						a {
 							color: rgba($color-white, .60);
@@ -968,14 +1417,9 @@ html {
 					}
 				}
 			}
-			div[id*="hs_form_target_form"] {
-				grid-column: 2/3;
-			}
 		}
-		
 		img[src*="bcp.crwdcntrl"] {
 			display: none;
 		}
-	
 	}
 }
