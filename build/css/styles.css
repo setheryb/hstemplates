@@ -632,7 +632,9 @@ html {
         html body.template1 .two-sides {
           margin: 2rem 0; } }
       html body.template1 .two-sides.left .text, html body.template1 .two-sides.right .text {
-        width: 50%; }
+        width: 50%;
+        position: relative;
+        z-index: 1; }
         html body.template1 .two-sides.left .text h4, html body.template1 .two-sides.right .text h4 {
           font-family: Fira Sans, Helvetica Neue, Helvetica, Calibri, Arial;
           font-weight: 600;
@@ -706,7 +708,8 @@ html {
         html body.template1 .two-sides.left .image:after, html body.template1 .two-sides.right .image:after {
           content: '';
           display: block;
-          width: 402px;
+          width: 100%;
+          max-width: calc(32rem + 4px);
           height: 417px;
           background-repeat: none;
           -webkit-mask-repeat: no-repeat;
@@ -720,6 +723,9 @@ html {
           left: -2rem;
           right: 0;
           z-index: -1; }
+          @media (max-width: 55em) {
+            html body.template1 .two-sides.left .image:after, html body.template1 .two-sides.right .image:after {
+              max-width: 100%; } }
         html body.template1 .two-sides.left .image img, html body.template1 .two-sides.right .image img {
           -webkit-mask-repeat: no-repeat;
                   mask-repeat: no-repeat;
@@ -727,16 +733,28 @@ html {
                   mask-position: center;
           -webkit-mask-size: contain;
                   mask-size: contain;
-          width: 25rem;
+          width: 32rem;
           height: 25rem;
           -o-object-fit: cover;
              object-fit: cover; }
+          @media (max-width: 55em) {
+            html body.template1 .two-sides.left .image img, html body.template1 .two-sides.right .image img {
+              max-width: 100%;
+              height: auto; } }
         html body.template1 .two-sides.left .image.no-shadow, html body.template1 .two-sides.right .image.no-shadow {
           -webkit-filter: none;
                   filter: none; }
         html body.template1 .two-sides.left .image.no-crop, html body.template1 .two-sides.right .image.no-crop {
           -webkit-mask-image: none;
                   mask-image: none; }
+          html body.template1 .two-sides.left .image.no-crop img, html body.template1 .two-sides.right .image.no-crop img {
+            max-width: 32rem;
+            -o-object-fit: contain;
+               object-fit: contain; }
+            @media (max-width: 55em) {
+              html body.template1 .two-sides.left .image.no-crop img, html body.template1 .two-sides.right .image.no-crop img {
+                max-width: 100%;
+                height: auto; } }
         html body.template1 .two-sides.left .image.crop-1 img, html body.template1 .two-sides.right .image.crop-1 img {
           -webkit-mask-image: url(https://goto.hsi.com/hubfs/_customDev/image-crop-1.svg);
                   mask-image: url(https://goto.hsi.com/hubfs/_customDev/image-crop-1.svg); }
@@ -1202,6 +1220,10 @@ html {
                 text-decoration: underline; }
               html body.template1 .footer-container-wrapper .form-footer form fieldset .hs-richtext p a:hover, html body.template1 .footer-container-wrapper .form-footer form fieldset .hs-richtext p a:active, html body.template1 .footer-container-wrapper .form-footer .hbspt-form fieldset .hs-richtext p a:hover, html body.template1 .footer-container-wrapper .form-footer .hbspt-form fieldset .hs-richtext p a:active {
                 text-decoration: none; }
+          html body.template1 .footer-container-wrapper .form-footer form ul[role=checkbox], html body.template1 .footer-container-wrapper .form-footer .hbspt-form ul[role=checkbox] {
+            -webkit-column-count: 2;
+               -moz-column-count: 2;
+                    column-count: 2; }
           html body.template1 .footer-container-wrapper .form-footer form input, html body.template1 .footer-container-wrapper .form-footer form select, html body.template1 .footer-container-wrapper .form-footer .hbspt-form input, html body.template1 .footer-container-wrapper .form-footer .hbspt-form select {
             width: 100% !important;
             background: rgba(255, 255, 255, 0.85);
@@ -1234,6 +1256,9 @@ html {
                 background: rgba(150, 255, 233, 0.3);
                 color: #96ffe9;
                 border: 0.125rem solid #96ffe9; }
+            html body.template1 .footer-container-wrapper .form-footer form input[type=checkbox], html body.template1 .footer-container-wrapper .form-footer form select[type=checkbox], html body.template1 .footer-container-wrapper .form-footer .hbspt-form input[type=checkbox], html body.template1 .footer-container-wrapper .form-footer .hbspt-form select[type=checkbox] {
+              width: auto !important;
+              margin-right: .5rem; }
         html body.template1 .footer-container-wrapper .form-footer .footer {
           -ms-grid-column: 2;
           -ms-grid-column-span: 1;

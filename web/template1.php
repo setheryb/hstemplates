@@ -40,7 +40,7 @@
 	</div>
 	
 	<div class="two-sides left">
-		<div class="image crop-2 bg-4 orange">
+		<div class="image crop-3 bg-4 orange">
 			<img src="http://www.fillmurray.com/400/400" />
 		</div>
 		<div class="text">
@@ -83,7 +83,7 @@
 	</div>
 	
 	<div class="two-sides right">
-		<div class="image crop-3 bg-1">
+		<div class="image crop-1 bg-4 blue">
 			<img src="http://www.fillmurray.com/401/400" />
 		</div>
 		<div class="text">

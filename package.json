@@ -3,7 +3,7 @@
  "version": "0.1",
  "description": "Website for hsi.com",
  "main": "gulpfile.js",
- "author": "Seth Burnett, Josh Pratt,",
+ "author": "Seth Burnett",
  "copyright": "HSI",
  "license": "UNLICENSED",
  "private": true,

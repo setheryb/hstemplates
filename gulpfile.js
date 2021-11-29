@@ -32,10 +32,10 @@ let prodStatVers = null;
 
 const banner = [
 	'/**',
-	' * @project				<%= pkg.name %>',
-	' * @author				 <%= pkg.author %>',
-	' * @copyright			Copyright (c) ' + $.moment().format('YYYY') + ', <%= pkg.copyright %>',
-	' * @build					' + $.moment().format('llll') + ' ET',
+	' * @project			<%= pkg.name %>',
+	' * @author				<%= pkg.author %>',
+	' * @copyright		Copyright (c) ' + $.moment().format('YYYY') + ', <%= pkg.copyright %>',
+	' * @build				' + $.moment().format('llll') + ' ET',
 	' *',
 	' */',
 	''

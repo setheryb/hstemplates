@@ -280,6 +280,8 @@ html {
 					
 					.text {
 						width:50%;
+						position: relative;
+						z-index: 1;
 						
 						h4 {
 							font-family: $font-fira-sans;
@@ -355,7 +357,8 @@ html {
 						&:after {
 							content: '';
 							display: block;
-							width: 402px;
+							width: 100%;
+							max-width: calc(32rem + 4px);
 							height: 417px;
 							background-repeat: none;
 							mask-repeat: no-repeat;
@@ -367,17 +370,23 @@ html {
 							left: -2rem;
 							right: 0;
 							z-index: -1;
+							@media (max-width: 55em) {
+								max-width: 100%;
+							}
 						}
 						
 						img {
 							mask-repeat: no-repeat;
 							mask-position: center;
 							mask-size: contain;
-							width: 25rem;
+							width: 32rem;
 							height: 25rem;
 							object-fit: cover;
 							
-							
+							@media (max-width: 55em) {
+								max-width: 100%;
+								height: auto;
+							}
 						}
 						
 						&.no-shadow {
@@ -386,6 +395,16 @@ html {
 						
 						&.no-crop {
 							mask-image: none;
+							
+							img {
+								max-width: 32rem;
+								object-fit: contain;
+								
+								@media (max-width: 55em) {
+									max-width: 100%;
+									height: auto;
+								}
+							}
 						}
 						
 						&.crop-1 {
@@ -924,6 +943,12 @@ html {
 							}
 						}
 						
+						ul {
+							&[role=checkbox] {
+								column-count: 2;
+							}
+						}
+						
 						input, select {
 							width: 100% !important;
 							background: rgba($color-white, .85);
@@ -955,6 +980,11 @@ html {
 									color: $color-mint;
 									border: .125rem solid $color-mint;
 								}
+							}
+							
+							&[type=checkbox] {
+								width: auto !important;
+								margin-right: .5rem;
 							}
 						}
 					}
