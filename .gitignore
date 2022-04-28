@@ -1,3 +1,5 @@
+.DS_Store
+**/.DS_Store
 # Logs
 logs
 *.log
@@ -74,3 +76,5 @@ typings/
 
 # FuseBox cache
 .fusebox/
+site/.DS_Store
+web/.DS_Store
